@@ -1,0 +1,40 @@
+<code class="hljs javascript"><h1>Новая запись</h1>
+    <form action="/new" method="POST">
+        <table border="0">
+            <tbody>
+            <tr>
+                <td>Дело</td>
+                <td><input type="text" name="task"></td>
+            </tr>
+            <tr>
+                <td>Описание</td>
+                <td><input type="text" name="description"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Сохранить"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <hr>
+    <h1>Список дел</h1>
+    <theader>
+    </theader>
+    <table border="1">
+        <tbody>
+        <tr>
+            <td><b>Дело</b></td>
+            <td><b>Описание</b></td>
+        </tr>
+        {% for item in items %}
+            </tbody>
+            <tbody>
+            <tr>
+                <td>{{ item.task }} </td>
+                <td>{{ item.description }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</code>
