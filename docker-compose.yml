@@ -1,7 +1,8 @@
-version: '2'
+version: '3'
 services:
   web:
     build: ./flaskapp
+    container_name: web
     ports:
       - '5000:5000'
     volumes:
@@ -10,3 +11,6 @@ services:
       - mongodb
   mongodb:
     image: mongo:3.6
+    container_name: mongodb
+
+
