@@ -1,12 +1,12 @@
 version: '2'
-  services:
-    web:
-      build: ./Docker_Compose_Test_Project
-      ports:
-        - '5000:5000'
-      volumes:
-        - ./Docker_Compose_Test_Project:/app
-      links:
-        - mongodb
-    mongodb:
-      image: mongo:3.6
+services:
+  web:
+    build: ./flaskapp
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./flaskapp:/app
+    links:
+      - mongodb
+  mongodb:
+    image: mongo:3.6
